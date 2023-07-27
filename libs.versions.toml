@@ -41,6 +41,11 @@ arouterCompiler = "1.5.2"
 immersionbar = "3.2.2"
 immersionbarKtx = "3.2.2"
 
+# jetpack库
+hiltAndroid = "2.44"
+hiltCompiler = "2.44"
+hiltPlugin = "2.44"
+
 [libraries]
 # android 库
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -57,7 +62,6 @@ viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinVersion" }
 kotlinCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCore" }
 kotlinAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinAndroid" }
-
 
 # 网络库
 okhttpVersion = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
@@ -76,8 +80,13 @@ arouterCompiler = { module = "com.alibaba:arouter-compiler", version.ref = "arou
 immersionbar = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionbar" }
 immersionbarKtx = { module = "com.geyifeng.immersionbar:immersionbar-ktx", version.ref = "immersionbarKtx" }
 
+#jetpack库
+hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+
 [plugins]
 android-app = { id = "com.android.application", version.ref = "androidApplication" }
 android-lib = { id = "com.android.library", version.ref = "androidLib" }
 kotlin-version = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinVersion" }
+hilt-android-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
