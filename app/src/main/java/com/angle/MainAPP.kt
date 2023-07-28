@@ -8,19 +8,22 @@ import com.rt.lib_connect.OkHttpManager
 import com.rt.lib_connect.config.OkHttpConfig
 import com.rt.lib_foundation.InitModelProject
 import com.rt.lib_router.RouterManager
+import dagger.hilt.android.HiltAndroidApp
 
 private const val metaKey = "AlphaInit"
 
+@HiltAndroidApp
 class MainAPP : Application() {
 
 
     override fun onCreate() {
         super.onCreate()
 
+        RouterManager.init(this,true)
+
         //读取所有的AlphaInit文件进行相关初始化
         readAlphaInit()
     }
-
 
     /**
      * 读取所有的Init文件

@@ -1,6 +1,17 @@
 plugins {
     id 'com.android.library'
+    id "kotlin-kapt"
+    id "kotlin-android"
+    id "kotlin-parcelize"
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+}
+
+kapt {
+    arguments {
+        correctErrorTypes true
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
 }
 
 android {
@@ -30,7 +41,12 @@ android {
 }
 
 dependencies {
-//    api project(path: :'lib_foundation')
-//    api project(path :'lib_business')
     api project(path: ':lib_business')
+
+    kapt libs.arouterCompiler
+    implementation libs.arouterApi
+
+    kapt libs.hiltCompiler
+    implementation libs.hiltAndroid
+
 }

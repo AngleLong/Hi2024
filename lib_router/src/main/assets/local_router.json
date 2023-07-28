@@ -1,0 +1,14 @@
+{
+  "modelList": [
+    {
+      "name": "测试页面",
+      "path": "test",
+      "url": "www.dss.test"
+    },
+    {
+      "name": "登陆页面",
+      "path": "/login/LoginActivity",
+      "url": "www.dss.login"
+    }
+  ]
+}

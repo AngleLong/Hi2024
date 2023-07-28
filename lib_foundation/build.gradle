@@ -43,6 +43,9 @@ dependencies {
     api libs.kotlinAndroid
     api libs.viewModelKtx
     api libs.gsonVersion
-    api libs.hiltAndroid
+    api libs.activityKtx
+    api libs.constraintlayout
+    api libs.material
+    implementation libs.hiltAndroid
     kapt libs.hiltCompiler
 }

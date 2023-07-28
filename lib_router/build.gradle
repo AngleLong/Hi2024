@@ -40,6 +40,6 @@ android {
 dependencies {
     api project(path: ':lib_foundation')
 
-    api libs.arouterApi
+    implementation libs.arouterApi
     kapt libs.arouterCompiler
 }

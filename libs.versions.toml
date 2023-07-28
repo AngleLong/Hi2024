@@ -11,6 +11,7 @@ material = "1.6.1"
 constraintlayout = "2.1.4"
 coreKtx = "1.7.0"
 viewModelKtx = "2.4.0"
+activityKtx = "1.7.2"
 #lifecycleKtx = "2.4.0"
 
 # kotlin 库
@@ -53,6 +54,7 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
 viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "viewModelKtx" }
+activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 #lifecycleKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleKtx" }
 #对于 ViewModelScope，请使用 androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0 或更高版本。
 #对于 LifecycleScope，请使用 androidx.lifecycle:lifecycle-runtime-ktx:2.4.0 或更高版本。

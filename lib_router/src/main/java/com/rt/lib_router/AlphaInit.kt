@@ -7,9 +7,9 @@ import com.rt.lib_foundation.InitModelProject
 class AlphaInit : InitModelProject {
 
     override fun init(application: Application) {
-        Looper.myQueue().addIdleHandler {
-            RouterManager.init(application, true)
-            false
-        }
+//        Looper.myQueue().addIdleHandler {
+//            RouterManager.init(application, true)
+//            false
+//        }
     }
 }

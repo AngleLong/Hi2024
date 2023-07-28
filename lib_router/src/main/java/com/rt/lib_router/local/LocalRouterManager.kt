@@ -3,7 +3,9 @@ package com.rt.lib_router.local
 import android.content.Context
 import com.alibaba.android.arouter.facade.Postcard
 import com.google.gson.Gson
+import com.rt.lib_router.center.LOGINROUTER
 import com.rt.lib_router.center.TESTROUTERSTR
+import com.rt.lib_router.center.bindLogin
 import com.rt.lib_router.center.bindTest
 import com.rt.lib_router.model.LocalRouterModel
 
@@ -30,7 +32,7 @@ object LocalRouterManager {
         val stringBuilder = StringBuilder()
         val assets = context.assets
         try {
-            val bf = BufferedReader(InputStreamReader(assets.open("")))
+            val bf = BufferedReader(InputStreamReader(assets.open("local_router.json")))
             var line: String?
             while (bf.readLine().also { line = it } != null) {
                 stringBuilder.append(line)
@@ -56,6 +58,9 @@ object LocalRouterManager {
     private fun localPostcardKey(key: String): Postcard = when (key) {
         TESTROUTERSTR -> {
             bindTest()
+        }
+        LOGINROUTER -> {
+            bindLogin()
         }
         else -> {
             bindTest()

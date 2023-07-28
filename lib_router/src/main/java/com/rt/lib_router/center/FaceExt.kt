@@ -16,3 +16,12 @@ fun openDefaultWeb(urlParams: Map<String, String?>) {
     }
     bindDefaultWeb().navigation()
 }
+
+const val LOGINROUTER = "/login/LoginActivity"
+fun bindLogin(): Postcard = ARouter.getInstance().build(LOGINROUTER)
+fun openLogin(urlParams: Map<String, String?> = mutableMapOf()) {
+    for ((key, value) in urlParams) {
+        bindLogin().withString(key, value)
+    }
+    bindLogin().navigation()
+}
