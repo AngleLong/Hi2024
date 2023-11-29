@@ -57,7 +57,7 @@ dependencies {
     api libs.immersionbarKtx
 
     //日志
-    api libs.logger
+//    api libs.logger
 
     //适配器
     api libs.baseRecyclerViewAdapterHelper

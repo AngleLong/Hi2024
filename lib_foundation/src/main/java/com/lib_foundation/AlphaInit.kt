@@ -11,12 +11,12 @@ import com.lib_foundation.logger.MyCsvFormatStrategy
 class AlphaInit : InitModelProject {
     override fun init(application: Application) {
 
-        val formatStrategy: FormatStrategy = PrettyFormatStrategy.newBuilder()
-            .showThreadInfo(false)
-            .methodCount(0)
-            .methodOffset(7)
-            .tag("YouAngle")
-            .build()
+//        val formatStrategy: FormatStrategy = PrettyFormatStrategy.newBuilder()
+//            .showThreadInfo(false)
+//            .methodCount(0)
+//            .methodOffset(7)
+//            .tag("YouAngle")
+//            .build()
 
         Logger.addLogAdapter(
             DiskLogAdapter(

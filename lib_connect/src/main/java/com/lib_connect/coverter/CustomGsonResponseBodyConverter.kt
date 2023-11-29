@@ -1,8 +1,10 @@
 package com.lib_connect.coverter
 
+import android.text.TextUtils
 import android.util.Log
 import com.google.gson.Gson
 import com.lib_connect.exception.ApiException
+import com.lib_connect.model.Empty
 import okhttp3.ResponseBody
 import okio.IOException
 import org.json.JSONException
@@ -13,7 +15,8 @@ import java.lang.reflect.Type
 /**
  * 自定义相应的转换器
  */
-class CustomGsonResponseBodyConverter<T>(private val gson: Gson, private val type: Type) : Converter<ResponseBody, T> {
+class CustomGsonResponseBodyConverter<T>(private val gson: Gson, private val type: Type) :
+    Converter<ResponseBody, T> {
 
     @Throws(IOException::class)
     override fun convert(value: ResponseBody): T {
@@ -30,23 +33,25 @@ class CustomGsonResponseBodyConverter<T>(private val gson: Gson, private val typ
         //{"data":null,"errorCode":-1,"errorMsg":"用户名已经被注册！"}
 
         val string = value.string()
-        Log.e("TAG", "convert: $string" )
+        Log.e("TAG", "convert: $string")
         try {
             val requestJson = JSONObject(string)
             val resultCode = requestJson.optInt("errorCode")
             if (0 == resultCode) {
-                val datJson = requestJson.optString("errorMsg")
+                val dateJson = requestJson.optString("data")
 
                 Log.e("TAG", "convert: $type")
 
-                // TODO: 这里看看如果是空的情况下是否要返回对象
-                if(datJson is String){
-                    
+                if (TextUtils.isEmpty(dateJson)) {
+                    return Empty() as T
                 }
 
-                return gson.fromJson(datJson, type)
+                return gson.fromJson(dateJson, type)
             } else {
-                throw ApiException(requestJson.optInt("errorCode"), requestJson.optString("errorMsg"))
+                throw ApiException(
+                    requestJson.optInt("errorCode"),
+                    requestJson.optString("errorMsg")
+                )
             }
         } catch (e: JSONException) {
             throw IOException(e.toString())

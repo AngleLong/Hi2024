@@ -69,5 +69,12 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
     }
 
     override fun bindAction() {
+        mBinding.registerBtn.setOnClickListener {
+            loginViewModel.userRegister("AngleLong","hjl092810","hjl092810")
+        }
+
+        loginViewModel.register.data.observe(this@LoginActivity){
+
+        }
     }
 }

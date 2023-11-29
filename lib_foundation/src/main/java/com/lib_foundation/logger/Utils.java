@@ -1,18 +1,24 @@
 package com.lib_foundation.logger;
 
-import static com.orhanobut.logger.Logger.ASSERT;
-import static com.orhanobut.logger.Logger.DEBUG;
-import static com.orhanobut.logger.Logger.ERROR;
-import static com.orhanobut.logger.Logger.INFO;
-import static com.orhanobut.logger.Logger.VERBOSE;
-import static com.orhanobut.logger.Logger.WARN;
+
+import static com.lib_foundation.logger.Logger.ERROR;
+import static com.lib_foundation.logger.Logger.VERBOSE;
+import static com.lib_foundation.logger.Logger.DEBUG;
+import static com.lib_foundation.logger.Logger.ASSERT;
+import static com.lib_foundation.logger.Logger.INFO;
+import static com.lib_foundation.logger.Logger.WARN;
+
+
+import androidx.annotation.Nullable;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 
-
+/**
+ * Provides convenient methods to some common operations
+ */
 final class Utils {
 
     private Utils() {
@@ -143,7 +149,7 @@ final class Utils {
         return "Couldn't find a correct type for the object";
     }
 
-    static <T> T checkNotNull(final T obj) {
+    static <T> T checkNotNull(@Nullable final T obj) {
         if (obj == null) {
             throw new NullPointerException();
         }

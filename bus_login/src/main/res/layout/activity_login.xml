@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity">
 
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
