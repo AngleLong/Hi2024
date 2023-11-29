@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id "kotlin-kapt"
+    id "kotlin-android"
+    id "kotlin-parcelize"
+    id 'com.google.dagger.hilt.android'
+}
+
+kapt {
+    correctErrorTypes true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+android {
+    namespace 'com.lib_common'
+    compileSdk libs.versions.targetSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    viewBinding {
+        enable = true
+    }
+}
+
+dependencies {
+    api project(path: ':lib_router')
+    api project(path: ':lib_connect')
+
+    kapt libs.arouterCompiler
+    implementation libs.arouterApi
+
+    kapt libs.hiltCompiler
+    implementation libs.hiltAndroid
+}

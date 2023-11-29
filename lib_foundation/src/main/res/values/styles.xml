@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_color_1_size_font_18">
+        <item name="android:textSize">@dimen/font_size_18</item>
+        <item name="android:textColor">@color/font_color_1</item>
+    </style>
+
+    <style name="text_color_1_size_font_15">
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:textColor">@color/font_color_1</item>
+    </style>
+
+    <style name="text_color_2_size_font_15">
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:textColor">@color/font_color_2</item>
+    </style>
+
+    <style name="text_color_2_size_font_14">
+        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textColor">@color/font_color_2</item>
+    </style>
+
+    <style name="text_color_3_size_font_14">
+        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textColor">@color/font_color_3</item>
+    </style>
+
+    <style name="text_color_white_size_font_14">
+        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textColor">@color/font_color_white</item>
+    </style>
+
+    <style name="text_color_4_size_font_14">
+        <item name="android:textSize">@dimen/font_size_14</item>
+        <item name="android:textColor">@color/font_color_4</item>
+    </style>
+
+    <style name="text_color_white_size_font_12">
+        <item name="android:textSize">@dimen/font_size_12</item>
+        <item name="android:textColor">@color/font_color_white</item>
+    </style>
+</resources>

@@ -2,8 +2,8 @@ package com.angle
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.rt.lib_foundation.DataState
-import com.rt.lib_foundation.loadDataWithState
+import com.lib_foundation.DataState
+import com.lib_foundation.loadDataWithState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

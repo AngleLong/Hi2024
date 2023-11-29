@@ -10,7 +10,7 @@ kapt {
 }
 
 android {
-    namespace 'com.rt.lib_foundation'
+    namespace 'com.lib_foundation'
     compileSdk libs.versions.targetSdk.get().toInteger()
 
     defaultConfig {
@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -42,10 +46,24 @@ dependencies {
     api libs.kotlinCore
     api libs.kotlinAndroid
     api libs.viewModelKtx
-    api libs.gsonVersion
+    api libs.gson
     api libs.activityKtx
     api libs.constraintlayout
     api libs.material
+    api libs.livedataKtx
+
+    // 状态栏
+    api libs.immersionbar
+    api libs.immersionbarKtx
+
+    //日志
+    api libs.logger
+
+    //适配器
+    api libs.baseRecyclerViewAdapterHelper
+    // todo 如果项目比较大的情况下,最好还是把图片单独生成一个model使用
+    api libs.glide
+
     implementation libs.hiltAndroid
     kapt libs.hiltCompiler
 }

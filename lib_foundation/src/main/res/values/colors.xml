@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--背景颜色-->
+    <color name="windowBackground">#FFFFFF</color>
+
+    <!--闪屏背景色-->
+    <color name="windowSplashScreenBackground">#FFFFFF</color>
+
+    <!--闪屏Icon背景色-->
+    <color name="windowSplashScreenIconBackgroundColor">#FFFFFF</color>
+
+    <!--主要颜色-->
+    <color name="colorPrimary">#003AA3</color>
+    <color name="colorOnPrimary">#003AA3</color>
+    <color name="colorPrimaryVariant">#003AA3</color>
+
+    <!--次要颜色-->
+    <color name="colorSecondary">#0F64FF</color>
+    <color name="colorOnSecondary">#0F64FF</color>
+    <color name="colorSecondaryVariant">#0F64FF</color>
+
+    <!--状态栏颜色-->
+    <color name="statusBarColor">#FFFFFF</color>
+
+    <!--1~3级文字颜色-->
+    <color name="textColorPrimary">#1A1A1A</color>
+    <color name="textColorSecondary">#333333</color>
+    <color name="textColorTertiary">#666666</color>
+
+    <!--1~5级文字颜色-->
+    <color name="font_color_1">#1A1A1A</color>
+    <color name="font_color_2">#333333</color>
+    <color name="font_color_3">#666666</color>
+    <color name="font_color_4">#999999</color>
+    <color name="font_color_5">#CCCCCC</color>
+
+    <color name="font_color_white">#FFFFFF</color>
+
+    <!--背景颜色-->
+    <color name="bg_color_1">#F7F7F7</color>
+    <color name="bg_color_2">#FFFFFF</color>
+    <color name="bg_color_3">#CCCCCC</color>
+
+    <color name="bg_color_70_black">#b3000000</color>
+
+    <!--分割线颜色-->
+    <color name="line_color_1">#F0F0F0</color>
+    <color name="line_color_2">#E6E6E6</color>
+
+</resources>

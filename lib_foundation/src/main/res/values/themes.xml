@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    主题的一些属性
+    https://blog.csdn.net/qq_42420293/article/details/119292734
+    -->
+
+    <!--最基本的主题-->
+    <style name="VeryBaseTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!--背景颜色-->
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <!--进入退出动画-->
+        <item name="android:windowAnimationStyle">@style/windowAnimationStyle</item>
+        <!--主要颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <!--次要颜色-->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <!--状态栏颜色-->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <!--应用的主要文字颜色-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--辅助文字颜色,比主要颜色淡一级-->
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <!--三级文字颜色-->
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+    </style>
+
+    <!--AppActivity的进入和退出动画-->
+    <style name="windowAnimationStyle">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/no_change_default</item>
+        <item name="android:activityCloseEnterAnimation">@anim/no_change_default</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_from_left</item>
+    </style>
+
+    <!--对外的主题-->
+    <style name="Theme.Hi2024" parent="VeryBaseTheme" />
+
+
+    <style name="DialogTheme" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/foundation_corners_white_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>

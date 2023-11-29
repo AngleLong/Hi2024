@@ -1,6 +1,6 @@
 package com.angle
 
-import com.rt.lib_connect.OkHttpManager
+import com.lib_connect.OkHttpManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

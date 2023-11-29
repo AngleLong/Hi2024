@@ -6,19 +6,19 @@ versionCode = "1"
 versionName = "1.0"
 
 # android 库
-appcompat = "1.6.1"
-material = "1.6.1"
-constraintlayout = "2.1.4"
-coreKtx = "1.7.0"
-viewModelKtx = "2.4.0"
-activityKtx = "1.7.2"
-#lifecycleKtx = "2.4.0"
+appcompatVersion = "1.6.1"
+materialVersion = "1.8.0"
+constraintlayoutVersion = "2.1.4"
+coreKtxVersion = "1.9.0"
+viewModelKtxVersion = "2.6.1"
+activityKtxVersion = "1.7.2"
+splashscreenVersion = "1.0.1"
 
 # kotlin 库
 kotlinVersion = "1.8.10"
 kotlinKaptVersion = "1.8.22"
-kotlinCore = "1.4.3"
-kotlinAndroid = "1.6.4"
+kotlinCoreVersion = "1.6.4"
+kotlinAndroidVersion = "1.6.4"
 
 # android 插件
 androidApplication = "7.4.2"
@@ -27,68 +27,94 @@ androidLib = "7.4.2"
 # 三方库
 # 网络请求
 okhttpVersion = "4.10.0"
-retrofitVersin = "2.9.0"
+retrofitVersion = "2.9.0"
 gsonVersion = "2.9.0"
-rxAndroid = "2.1.1"
-rxJavaAdapter = "2.9.0"
-converterGson = "2.9.0"
-okhttpInterceptor = "4.10.0"
+rxAndroidVersion = "2.1.1"
+rxJavaAdapterVersion = "2.9.0"
+converterGsonVersion = "2.9.0"
+okhttpInterceptorVersion = "4.10.0"
 
 # 路由
-arouterApi = "1.5.2"
-arouterCompiler = "1.5.2"
+arouterApiVersion = "1.5.2"
+arouterCompilerVersion = "1.5.2"
 
 # 沉浸式状态栏
-immersionbar = "3.2.2"
-immersionbarKtx = "3.2.2"
+immersionbarVersion = "3.2.2"
+immersionbarKtxVersion = "3.2.2"
 
 # jetpack库
-hiltAndroid = "2.44"
-hiltCompiler = "2.44"
-hiltPlugin = "2.44"
+hiltAndroidVersion = "2.44"
+hiltCompilerVersion = "2.44"
+hiltPluginVersion = "2.44"
+livedataKtxVersion = "2.6.1"
+navigationFragmentVersion = "2.5.3"
+navigationUiVersion = "2.5.3"
+
+#日志
+loggerVersion = "2.2.0"
+
+#适配器
+baseRecyclerViewAdapterHelperVersion = "4.0.1"
+
+#图片
+glideVersion = "4.13.0"
 
 [libraries]
-# android 库
-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
-material = { module = "com.google.android.material:material", version.ref = "material" }
-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
-coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
-viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "viewModelKtx" }
-activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+# android 原生库
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+material = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayoutVersion" }
+coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreenVersion" }
+
+viewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "viewModelKtxVersion" }
+activityKtx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtxVersion" }
 #lifecycleKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleKtx" }
 #对于 ViewModelScope，请使用 androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0 或更高版本。
 #对于 LifecycleScope，请使用 androidx.lifecycle:lifecycle-runtime-ktx:2.4.0 或更高版本。
 #对于 liveData，请使用 androidx.lifecycle:lifecycle-livedata-ktx:2.4.0 或更高版本。
 
+#jetpack库
+hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompilerVersion" }
+livedataKtx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "livedataKtxVersion" }
+navigationFragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationFragmentVersion" }
+navigationUi = { module = "androidx.navigation:navigation-ui", version.ref = "navigationUiVersion" }
+
 # kotlin 库
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinVersion" }
-kotlinCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCore" }
-kotlinAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinAndroid" }
+kotlinCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoreVersion" }
+kotlinAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinAndroidVersion" }
 
 # 网络库
-okhttpVersion = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
-okhttpInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttpInterceptor" }
-retrofitVersin = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersin" }
-gsonVersion = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
-rxAndroid = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxAndroid" }
-rxJavaAdapter = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "rxJavaAdapter" }
-converterGson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+okhttpInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttpInterceptorVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
+rxAndroid = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxAndroidVersion" }
+rxJavaAdapter = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "rxJavaAdapterVersion" }
+converterGson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGsonVersion" }
 
 # 路由库
-arouterApi = { module = "com.alibaba:arouter-api", version.ref = "arouterApi" }
-arouterCompiler = { module = "com.alibaba:arouter-compiler", version.ref = "arouterCompiler" }
+arouterApi = { module = "com.alibaba:arouter-api", version.ref = "arouterApiVersion" }
+arouterCompiler = { module = "com.alibaba:arouter-compiler", version.ref = "arouterCompilerVersion" }
 
 #状态栏
-immersionbar = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionbar" }
-immersionbarKtx = { module = "com.geyifeng.immersionbar:immersionbar-ktx", version.ref = "immersionbarKtx" }
+immersionbar = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionbarVersion" }
+immersionbarKtx = { module = "com.geyifeng.immersionbar:immersionbar-ktx", version.ref = "immersionbarKtxVersion" }
 
-#jetpack库
-hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
-hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+#日志
+logger = { module = "com.orhanobut:logger", version.ref = "loggerVersion" }
+
+#适配器
+baseRecyclerViewAdapterHelper = { module = "io.github.cymchad:BaseRecyclerViewAdapterHelper", version.ref = "baseRecyclerViewAdapterHelperVersion" }
+
+#图片
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glideVersion" }
 
 [plugins]
 android-app = { id = "com.android.application", version.ref = "androidApplication" }
 android-lib = { id = "com.android.library", version.ref = "androidLib" }
 kotlin-version = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinVersion" }
-hilt-android-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
+hilt-android-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hiltPluginVersion" }

@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'com.angle.lib_connect'
+    namespace 'com.lib_connect'
     compileSdk libs.versions.targetSdk.get().toInteger()
 
     defaultConfig {
@@ -30,14 +30,17 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
-
     api project(path: ':lib_foundation')
 
-    api libs.okhttpVersion
-    api libs.retrofitVersin
+    api libs.okhttp
+    api libs.retrofit
     api libs.rxAndroid
     api libs.rxJavaAdapter
     api libs.converterGson

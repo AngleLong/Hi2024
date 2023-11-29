@@ -12,7 +12,7 @@ kapt {
 }
 
 android {
-    namespace 'com.rt.lib_router'
+    namespace 'com.lib_router'
     compileSdk libs.versions.targetSdk.get().toInteger()
 
     defaultConfig {
@@ -34,6 +34,10 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    viewBinding {
+        enable = true
     }
 }
 

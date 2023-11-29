@@ -1,7 +1,17 @@
+// 如果有插件不支持的可以使用以下方式集成
+//buildscript{
+//    repositories {
+//        maven{}
+//    }
+//
+//    dependencies {
+//        classpath 'xxx:x.x.x'
+//    }
+//}
+
 plugins {
     alias libs.plugins.android.app apply false
     alias libs.plugins.android.lib apply false
     alias libs.plugins.kotlin.version apply false
     alias libs.plugins.hilt.android.gradle apply false
 }
-

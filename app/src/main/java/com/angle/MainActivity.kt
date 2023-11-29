@@ -1,13 +1,10 @@
 package com.angle
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.rt.lib_longin.LoginActivity
-import com.rt.lib_router.center.openLogin
+import com.rt.lib_router.center.getLoginService
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -32,7 +29,11 @@ class MainActivity : AppCompatActivity() {
 
 
 //        startActivity(Intent(this,LoginActivity::class.java))
-        openLogin()
+//        openLogin()
+
+        Log.e("TAG======>", "当前的登陆状态 ${getLoginService().isLogin()}")
+
+
 
 //        mainViewModel.getTest()
 
@@ -44,5 +45,11 @@ class MainActivity : AppCompatActivity() {
 //                Log.e("TAG", "onCreate: $e")
 //            }
 //        }
+
+
     }
+
+//    fun jump(view: View) {
+//        startActivity(Intent(this, NavigationActivity::class.java))
+//    }
 }
