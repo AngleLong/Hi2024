@@ -1,4 +1,4 @@
-package com.angle
+package com.bus_main
 
 import com.lib_connect.OkHttpManager
 import dagger.Module

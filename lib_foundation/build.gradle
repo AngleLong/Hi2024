@@ -64,6 +64,9 @@ dependencies {
     // todo 如果项目比较大的情况下,最好还是把图片单独生成一个model使用
     api libs.glide
 
+    //圆角图片
+    api libs.circleimageview
+
     implementation libs.hiltAndroid
     kapt libs.hiltCompiler
 }

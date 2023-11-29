@@ -1,29 +1,26 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'com.android.library'
     id "kotlin-kapt"
     id "kotlin-android"
     id "kotlin-parcelize"
+    id 'org.jetbrains.kotlin.android'
     id 'com.google.dagger.hilt.android'
 }
 
 kapt {
-    correctErrorTypes true
     arguments {
+        correctErrorTypes true
         arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
 
 android {
-    namespace libs.versions.applicationId.get()
+    namespace 'com.bus_main'
     compileSdk libs.versions.targetSdk.get().toInteger()
 
     defaultConfig {
-        applicationId libs.versions.applicationId.get()
         minSdk libs.versions.minSdk.get().toInteger()
         targetSdk libs.versions.targetSdk.get().toInteger()
-        versionCode libs.versions.versionCode.get().toInteger()
-        versionName libs.versions.versionName.get()
     }
 
     buildTypes {
@@ -48,12 +45,12 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':bus_login')
-    implementation project(path: ':bus_main')
-    kapt libs.hiltCompiler
-    implementation libs.hiltAndroid
+
+    api project(path: ':lib_common')
 
     kapt libs.arouterCompiler
     implementation libs.arouterApi
 
+    kapt libs.hiltCompiler
+    implementation libs.hiltAndroid
 }

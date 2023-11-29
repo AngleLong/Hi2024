@@ -2,10 +2,16 @@ package com.lib_login.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.Color
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
 import com.lib_common.BaseActivity
 import com.lib_login.databinding.ActivitySplashBinding
+import com.rt.lib_router.center.openLogin
+import com.rt.lib_router.center.openMain
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
@@ -27,9 +33,16 @@ class HiSplashActivity : BaseActivity<ActivitySplashBinding>() {
         }
 
         //闪屏主题
-//        installSplashScreen()
+        installSplashScreen()
     }
 
     override fun bindAction() {
+        lifecycleScope.launch(Dispatchers.Main) {
+            withContext(Dispatchers.IO) {
+                Thread.sleep(3000)
+            }
+
+            openMain()
+        }
     }
 }

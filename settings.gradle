@@ -22,7 +22,7 @@ rootProject.name = "Hi2024"
 // app壳工程
 include ':app'
 // 业务层
-include ':bus_login'
+include ':bus_login',':bus_main'
 // 上层公共层
 include ':lib_common'
 // 底层基础层

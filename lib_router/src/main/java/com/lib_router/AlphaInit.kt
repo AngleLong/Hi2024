@@ -1,4 +1,4 @@
-package com.rt.lib_router
+package com.lib_router
 
 import android.app.Application
 import android.os.Looper

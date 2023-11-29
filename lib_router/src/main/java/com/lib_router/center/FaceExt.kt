@@ -20,8 +20,8 @@ fun openDefaultWeb(urlParams: Map<String, String?>) {
 
 
 //--------------登录模块----------
-const val LOGINRGROUP = "/login"
-const val LOGINROUTER = "$LOGINRGROUP/loginActivity"
+const val LOGINGROUP = "/login"
+const val LOGINROUTER = "$LOGINGROUP/loginActivity"
 
 fun bindLogin(): Postcard = ARouter.getInstance().build(LOGINROUTER)
 fun openLogin(urlParams: Map<String, String?> = mutableMapOf()) {
@@ -31,5 +31,16 @@ fun openLogin(urlParams: Map<String, String?> = mutableMapOf()) {
     bindLogin().navigation()
 }
 
-const val LOGINSERVICE = "/login/loginService"
+const val LOGINSERVICE = "$LOGINGROUP/loginService"
 fun getLoginService(): LoginService = ARouter.getInstance().navigation(LoginService::class.java)
+
+//--------------主页面模块----------
+const val MAINGROUP = "/main"
+const val MAINROUTER = "$MAINGROUP/loginActivity"
+fun bindMain(): Postcard = ARouter.getInstance().build(MAINROUTER)
+fun openMain(urlParams: Map<String, String?> = mutableMapOf()) {
+    for ((key, value) in urlParams) {
+        bindMain().withString(key, value)
+    }
+    bindMain().navigation()
+}
